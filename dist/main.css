@@ -44,3 +44,23 @@ form button:hover{
   background:#186183;
   color: white;
 }
+
+.todo-container {
+  display: fex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}

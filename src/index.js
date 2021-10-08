@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
     todoDiv.appendChild(trashButton);
 
     todoList.appendChild(todoDiv);
+
+    todoInput.value = "";
   }
 })
 

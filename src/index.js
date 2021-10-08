@@ -19,9 +19,22 @@ function addTodo(event){
   todoDiv.classList.add("todo");
   
   const newTodo = document.createElement('li');
-  newTodo.innerText = 'hey';
+  newTodo.innerText = 'testing';
 
   newTodo.classList.add('todo-item');
   todoDiv.appendChild(newTodo);
+
+  const completedButton = document.createElement('button');
+  completedButton.innerHTML = '<i class=fas fa-check"></i>';
+  completedButton.classList.add("complete-btn");
+  todoDiv.appendChild(completedButton);
+
+  
+  const completedButton = document.createElement('button');
+  completedButton.innerHTML = '<i class=fas fa-check"></i>';
+  completedButton.classList.add("complete-btn");
+  todoDiv.appendChild(completedButton);
+
+
 }
 

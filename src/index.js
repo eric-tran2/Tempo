@@ -7,7 +7,7 @@ const todoList = document.querySelector('.todo-list');
 
 //event listeners 
 
-todoButton.addEventListener("click", addTodo);
+todoButton.addEventListener( addTodo);
 
 
 
@@ -34,6 +34,8 @@ function addTodo(event){
   trashButton.innerHTML = '<i class=fas fa-trash"></i>';
   trashButton.classList.add("complete-btn");
   todoDiv.appendChild(trashButton);
+
+  todoList.appendChild(todoDiv);
 
 
 }

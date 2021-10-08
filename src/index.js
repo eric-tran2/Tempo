@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const trashButton = document.createElement('button');
     trashButton.innerHTML = '<i class="fa fa-trash"></i>';
-    trashButton.classList.add("complete-btn");
+    trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
 
     todoList.appendChild(todoDiv);

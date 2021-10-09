@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const todo = task.parentElement;
       todo.remove();
     }
+    if (task.classList[0] === "complete-btn"){
+      const todo = task.parentElement;
+      todo.classList.toggle("completed");
+    }
     }
 })
 

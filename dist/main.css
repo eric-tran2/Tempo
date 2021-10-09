@@ -87,3 +87,8 @@ form button:hover{
 .todo-item{
   padding: 0rem 1rem;
 }
+
+.completed {
+  text-decoration: line-through;
+  opacity: .45;
+}

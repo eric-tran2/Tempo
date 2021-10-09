@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //event listeners 
   todoButton.addEventListener("click", addTodo);
+  todoList.addEventListener("click", deleteCheck);
+
 
 
 
@@ -39,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
     todoList.appendChild(todoDiv);
 
     todoInput.value = "";
+  }
+
+  function deleteCheck(event){
+
   }
 })
 

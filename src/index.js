@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const task = event.target;
     if (task.classList[0] === "trash-btn") {
       const todo = task.parentElement;
+      todo.classList.add("drop");
       todo.remove();
     }
     if (task.classList[0] === "complete-btn"){

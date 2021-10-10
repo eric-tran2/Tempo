@@ -1,3 +1,5 @@
+import "./styles/index.scss"
+
 document.addEventListener('DOMContentLoaded', () => {
 
 //selectors
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const task = event.target;
     if (task.classList[0] === "trash-btn") {
       const todo = task.parentElement;
-      todo.classList.add("drop");
+      todo.classList.add("fall");
       todo.addEventListener("transitioned", function(){
         todo.remove();
       })

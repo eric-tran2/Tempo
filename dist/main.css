@@ -1,7 +1,6 @@
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************************************/
-
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
+  \********************************************************************************************************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +8,9 @@
 }
 
 body {
-  background-image: linear-gradient(120deg,#186183, #fda085);
+  background-image: linear-gradient(120deg, #186183, #fda085);
   color: white;
-  font-family: 'Yaldevi', sans-serif;
+  font-family: "Yaldevi", sans-serif;
   min-height: 100vh;
 }
 
@@ -35,13 +34,14 @@ form input, form button {
 }
 
 form button {
-  color:#186183;
+  color: #186183;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-form button:hover{
-  background:#186183;
+
+form button:hover {
+  background: #186183;
   color: white;
 }
 
@@ -64,15 +64,15 @@ form button:hover{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .todo li {
   flex: 1;
 }
 
-.trash-btn, 
-.complete-btn{
+.trash-btn,
+.complete-btn {
   background: #d3550c;
   color: white;
   border: none;
@@ -85,16 +85,20 @@ form button:hover{
   background: #186a83;
 }
 
-.todo-item{
+.todo-item {
   padding: 0rem 1rem;
 }
 
 .completed {
   text-decoration: line-through;
-  opacity: .45;
+  opacity: 0.45;
 }
 
-.drop {
+.fall {
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
 }
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+

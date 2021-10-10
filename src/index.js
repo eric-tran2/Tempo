@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const todo = task.parentElement;
       todo.classList.toggle("completed");
     }
-    }
+  }
 })
 
 

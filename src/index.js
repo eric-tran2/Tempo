@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (task.classList[0] === "trash-btn") {
       const todo = task.parentElement;
       todo.classList.add("drop");
-      todo.remove();
+      todo.addEventListener("transitioned", function(){
+        todo.remove();
+      })
     }
     if (task.classList[0] === "complete-btn"){
       const todo = task.parentElement;

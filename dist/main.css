@@ -96,5 +96,5 @@ form button:hover{
 
 .drop {
   transform: translateY(8rem) rotateZ(20deg);
-  opacity: .45;
+  opacity: 0;
 }

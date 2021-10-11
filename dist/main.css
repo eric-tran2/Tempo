@@ -1,6 +1,7 @@
 /*!********************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
   \********************************************************************************************************************************************/
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -105,6 +106,29 @@ select {
   appearance: none;
   outline: none;
   border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #186183;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  background: #186183;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

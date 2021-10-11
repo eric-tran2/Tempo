@@ -94,7 +94,7 @@ form button:hover {
   opacity: 0.45;
 }
 
-.fall {
+.drop {
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
 }

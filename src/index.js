@@ -75,6 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
             todo.style.display = "none";
           }
+        case "unfinished":
+          if (!todo.classList.contains('finished')){
+            todo.style.display = 'flex';
+          } else { 
+            todo.style.display = "none";
+          }
       }
     })
   }

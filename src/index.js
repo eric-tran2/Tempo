@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function filterTodo(e) {
+  function filterTodo(event) {
     const todos = todoList.childNodes;
     todos.forEach(function (todo) {
-      switch (e.target.value) {
+      switch (event.target.value) {
         case "all":
           todo.style.display = "flex";
           break;

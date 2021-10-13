@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function addTodo(event){
     event.preventDefault();
+
     const todoDiv = document.createElement('div');
     todoDiv.classList.add("todo");
     
@@ -106,8 +107,32 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       todos = JSON.parse(localStorage.getItem('todos'));
     }
-    todos.push(todo);
-    localStorage.setItem('todos', JSON.stringify(todos));
+    todos.forEach(function(todo){
+      const todoDiv = document.createElement('div');
+      todoDiv.classList.add("todo");
+
+      const newTodo = document.createElement('li');
+      newTodo.innerText = todo;
+
+      newTodo.classList.add('todo-item');
+      todoDiv.appendChild(newTodo);
+
+      saveToLocalStorage(todoInput.value);
+
+      const completedButton = document.createElement('button');
+      completedButton.innerHTML = '<i class="fa fa-check"></i>';
+      completedButton.classList.add("complete-btn");
+      todoDiv.appendChild(completedButton);
+
+
+      const trashButton = document.createElement('button');
+      trashButton.innerHTML = '<i class="fa fa-trash"></i>';
+      trashButton.classList.add("trash-btn");
+      todoDiv.appendChild(trashButton);
+
+      todoList.appendChild(todoDiv);
+
+    });
   }
 })
 

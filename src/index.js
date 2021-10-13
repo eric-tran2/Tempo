@@ -117,8 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
       newTodo.classList.add('todo-item');
       todoDiv.appendChild(newTodo);
 
-      saveToLocalStorage(todoInput.value);
-
       const completedButton = document.createElement('button');
       completedButton.innerHTML = '<i class="fa fa-check"></i>';
       completedButton.classList.add("complete-btn");

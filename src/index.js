@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterOption = document.querySelector('.filter-todo');
 
   //event listeners 
+  document.addEventListener('DOMContentLoaded', getTodos);
   todoButton.addEventListener("click", addTodo);
   todoList.addEventListener("click", deleteCheck);
   filterOption.addEventListener("click", filterTodo);
@@ -100,7 +101,20 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }
 
+  function removeFromLocalStorage(todo) {
+    let todos;
+    if (localStorage.getItem("todos") === null) {
+      todo = [];
+    } else { 
+      todos = JSON.parse(localStorage.getItem("todos"));
+    }
+    const todoIndex = todo.children[0].innerText;
+    todos.splice(todos.indexOf(todoIndex), 1);
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
+
   function getTodos() {
+    console.log("testing");
     let todos;
     if (localStorage.getItem('todos') === null) {
       todos = [];

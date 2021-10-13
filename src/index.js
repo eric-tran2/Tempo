@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
         case "all":
           todo.style.display = "flex";
           break;
-        case "completed":
-          if (todo.classList.contains("completed")) {
+        case "finished":
+          if (todo.classList.contains("finished")) {
             todo.style.display = "flex";
           } else {
             todo.style.display = "none";
           }
           break;
-        case "uncompleted":
-          if (!todo.classList.contains("completed")) {
+        case "unfinished":
+          if (!todo.classList.contains("finished")) {
             todo.style.display = "flex";
           } else {
             todo.style.display = "none";

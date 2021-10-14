@@ -1,8 +1,10 @@
+// localStorage.clear();
 import "./styles/index.scss"
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-//selectors
+// selectors
 
   const todoInput = document.querySelector('.todo-input');
   const todoButton = document.querySelector('.todo-button');
@@ -115,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getTodos() {
-    console.log("testing");
+    // console.log("testing");
     let todos;
     if (localStorage.getItem('todos') === null) {
       todos = [];
@@ -147,6 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
   }
-})
 
+  
+
+})
 

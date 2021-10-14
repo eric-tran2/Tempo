@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (task.classList[0] === "trash-btn") {
       const todo = task.parentElement;
       todo.classList.add("drop");
+      removeFromLocalStorage(todo);
       todo.addEventListener("transitionend", function(){
         todo.remove();
       })
@@ -147,6 +148,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 })
-
 
 

@@ -23,7 +23,8 @@ body {
 // }
 
 header {
-  font-size: 1.25rem;
+  font-size: 15px;
+  font-family: 'Yaldevi', sans-serif;
 }
 
 header,
@@ -143,3 +144,7 @@ select {
 .select:hover::after {
   color: #186183;
 }
+
+// .iconify {
+//   size: 50px;
+// }

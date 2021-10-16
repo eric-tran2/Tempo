@@ -16,7 +16,8 @@ body {
 }
 
 header {
-  font-size: 1.25rem;
+  font-size: 15px;
+  font-family: "Yaldevi", sans-serif;
 }
 
 header,

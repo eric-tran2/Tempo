@@ -15,27 +15,37 @@
   <script src="./dist/main.js"></script>
   <title>Tempo</title>
 </head>
+<body>
   <a href="https://github.com/eric-tran2/Tempo">
     <span class="iconify" data-icon="octicon:mark-github-16"></span>
   <a href="https://www.linkedin.com/in/eric-tran-6aab70130/">
     <span href="https://www.linkedin.com/in/eric-tran-6aab70130/" class="iconify"
-      data-icon="ri:linkedin-box-fill"></span>
+  data-icon="ri:linkedin-box-fill"></span>
   <a href="https://angel.co/u/eric-tran-28">
     <span class="iconify" data-icon="la:angellist"></span>
   </a>
-
-<body>
   <header>
     <h1>Tempo</h1>
+    <div class="watch">
+      <div class="box">
+        <div class="clock">
+          <div class="hour">
+            <div class="hr" id="hr"></div>  
+            <div class="min">
+              <div class="mn" id="mn"></div>
+              <div class="sec">
+                <div class="sc" id="sc"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
   <form>
-    <h1>List of things to do</h1>
+    <!-- <h1>List of things to do</h1> -->
     <br>
     <input type="text" class="todo-input">
     <button class="todo-button" type="submit">
       <i class="fa fa-plus-square"></i>
-      <!-- <i class="fa fa-check"></i> -->
-      <!-- <i class="fa -solid fa-square-plus"></i> -->
     </button>
 
     <div class="select">

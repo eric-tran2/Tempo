@@ -7,10 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // selectors
 
+
   const todoInput = document.querySelector('.todo-input');
   const todoButton = document.querySelector('.todo-button');
   const todoList = document.querySelector('.todo-list');
   const filterOption = document.querySelector('.filter-todo');
+
+  // const todoInputError = document.getElementById('.todo-input');
+  // todoInputError.addEventListener("submit", (e) => {
+  //   let messages = [];
+  //   if (todoInput.value === '') {
+  //     messages.push('Cannot be left blank');
+  //   }
+  // })
+
 
   getTodos();
   
@@ -149,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
   }
+
 
   
 

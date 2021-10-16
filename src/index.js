@@ -1,5 +1,6 @@
 // localStorage.clear();
 import "./styles/index.scss"
+import "./styles/watch.scss"
 
 
 document.addEventListener('DOMContentLoaded', () => {

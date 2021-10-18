@@ -19,19 +19,9 @@ body {
   min-height: 100vh;
 }
 
-.box {
-  position: relative;
-  z-index: 1;
-  width: 400px;
-  height: 400px;
-  backdrop-filter: blur(35px);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
 header {
-  font-size: 15px;
-  font-family: "Yaldevi", sans-serif;
+  font-size: 29px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 header,
@@ -52,13 +42,15 @@ form input, form button {
 
 form button {
   color: #186183;
+  color: #2c0dc5;
   background: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 form button:hover {
   background: #186183;
+  background: #2c0dc5;
   color: white;
 }
 
@@ -88,9 +80,9 @@ form button:hover {
   flex: 1;
 }
 
-.trash-btn,
+.delete-btn,
 .complete-btn {
-  background: #d3550c;
+  background: red;
   color: white;
   border: none;
   padding: 1rem;
@@ -100,6 +92,14 @@ form button:hover {
 
 .complete-btn {
   background: #186a83;
+}
+
+.complete-btn:hover {
+  color: navy;
+}
+
+.delete-btn:hover {
+  color: navy;
 }
 
 .todo-item {
@@ -132,7 +132,8 @@ select {
 
 select {
   color: #186183;
-  width: 10rem;
+  font-family: "Yaldevi", sans-serif;
+  width: 9rem;
   cursor: pointer;
   padding: 1rem;
 }
@@ -154,7 +155,41 @@ select {
 /*!********************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/watch.scss ***!
   \********************************************************************************************************************************************/
+.box {
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  backdrop-filter: blur(35px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
 
+.watch {
+  position: relative;
+}
+
+.watch::before {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  width: 100%;
+  height: 60px;
+  background: radial-gradient(rgba(0, 0, 0, 0.2), transparent, transparent);
+  border-radius: 50%;
+}
+
+.clock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(transparent, rgba(255, 255, 255, 0.2)), url(clock.png);
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

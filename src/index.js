@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const todoList = document.querySelector('.todo-list');
   const filterOption = document.querySelector('.filter-todo');
 
+
+  // ERROR for if entry is empty
+
+
   // const todoInputError = document.getElementById('.todo-input');
   // todoInputError.addEventListener("submit", (e) => {
   //   let messages = [];
@@ -53,8 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     const trashButton = document.createElement('button');
-    trashButton.innerHTML = '<i class="fa fa-trash"></i>';
-    trashButton.classList.add("trash-btn");
+    // trashButton.innerHTML = '<i class="fa fa-trash"></i>';
+    trashButton.innerHTML = '<i class="fa fa-times" ></i>';
+    trashButton.classList.add("delete-btn");
     todoDiv.appendChild(trashButton);
 
     todoList.appendChild(todoDiv);
@@ -64,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function deleteCheck(event){
     const task = event.target;
-    if (task.classList[0] === "trash-btn") {
+    if (task.classList[0] === "delete-btn") {
       const todo = task.parentElement;
       todo.classList.add("drop");
       removeFromLocalStorage(todo);
@@ -151,8 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
       const trashButton = document.createElement('button');
-      trashButton.innerHTML = '<i class="fa fa-trash"></i>';
-      trashButton.classList.add("trash-btn");
+      trashButton.innerHTML = '<i class="fa fa-times" ></i>';
+
+      trashButton.classList.add("delete-btn");
       todoDiv.appendChild(trashButton);
 
       todoList.appendChild(todoDiv);

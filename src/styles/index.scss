@@ -25,15 +25,15 @@ body {
 //   z-index: 2;
 // }
 
-.box {
-  position: relative;
-  z-index: 1;
-  width: 400px;
-  height: 400px;
-  backdrop-filter: blur(35px);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
+// .box {
+//   position: relative;
+//   z-index: 1;
+//   width: 400px;
+//   height: 400px;
+//   backdrop-filter: blur(35px);
+//   border-radius: 50%;
+//   border: 1px solid rgba(255, 255, 255, 0.25);
+// }
 
 // main {
 //   min-height: 100vh;
@@ -47,8 +47,8 @@ body {
 // }
 
 header {
-  font-size: 15px;
-  font-family: 'Yaldevi', sans-serif;
+  font-size: 29px;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 header,
@@ -71,12 +71,14 @@ form input, form button {
 
 form button {
   color:#186183;
+  color: #2c0dc5;
   background: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 form button:hover{
   background:#186183;
+  background: #2c0dc5;
   color: white;
 }
 
@@ -106,9 +108,9 @@ form button:hover{
   flex: 1;
 }
 
-.trash-btn, 
+.delete-btn, 
 .complete-btn{
-  background: #d3550c;
+  background: red;
   color: white;
   border: none;
   padding: 1rem;
@@ -118,6 +120,13 @@ form button:hover{
 
 .complete-btn {
   background: #186a83;
+}
+
+.complete-btn:hover {
+  color: navy;
+}
+.delete-btn:hover {
+  color: navy;
 }
 
 .todo-item{
@@ -150,7 +159,8 @@ select {
 
 select {
   color: #186183;
-  width: 10rem;
+  font-family: 'Yaldevi', sans-serif;
+  width: 9rem;
   cursor: pointer;
   padding: 1rem;
 }

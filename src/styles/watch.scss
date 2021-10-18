@@ -47,3 +47,30 @@
   border-radius: 50%;
   z-index: 30;
 }
+
+.hours, .minutes, .seconds {
+  position: absolute;
+}
+
+.hours, .hr {
+  width: 220px;
+  height: 220px;
+}
+
+.minutes, .min {
+  width: 220px;
+  height: 220px;
+}
+
+.seconds, .sec {
+  width: 220px;
+  height: 220px;
+}
+
+.hr, .min, .sec {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 75%;
+  background-color: red;
+}

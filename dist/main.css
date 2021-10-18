@@ -189,6 +189,12 @@ select {
   justify-content: center;
   align-items: center;
   background: radial-gradient(transparent, rgba(255, 255, 255, 0.2)), url(clock.png);
+  background-size: cover;
+  border-radius: 50%;
+  backdrop-filter: blur(35px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: none;
+  border-bottom: none;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

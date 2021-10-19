@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
-
-
-<head>
-  <script src="https://use.fontawesome.com/4bbafc217e.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200;600&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./dist/main.css" />
-  <script src="./dist/main.js"></script>
-  <title>Tempo</title>
-</head>
-<body>
-  <h1>POMODRO timer</h1>
-  <div class="timer">
-    <div class="timerMinutes">0</div>
-    <div>:</div>
-    <div class="timerSeconds">00</div>
-    <audio
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+  
+  
+  <head>
+    <script src="https://use.fontawesome.com/4bbafc217e.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/main.css" />
+    <script src="./dist/main.js"></script>
+    <title>Tempo</title>
+  </head>
+  <body>
+    <div class="timer"> 
+      <div class="timerMinutes">0</div>
+      <div>:</div>
+      <div class="timerSeconds">00</div>
+      <audio
       src="https://soundbible.com/1424-Air-Plane-Ding.html"
-    ></audio>
-    <svg class="progress-ring" height="120" width="120">
-      <circle
-        class="progress_ring_circle"
+      ></audio>
+      <svg class="progress-tracker" height="120" width="120">
+        <circle
+        class="progress-circle"
         stroke-width="8"
         fill="transparent"
-        r="50"
-        cx="60"
-        cy="60"
-        />
+      r="50"
+      cx="60"
+      cy="60"
+      />
     </svg>
   </div>
   <div class="timer-buttons">
@@ -49,16 +48,23 @@
       <i class="fa fa-power-off"></i>
     </button>
   </div>
-  <a href="https://github.com/eric-tran2/Tempo">
-    <span class="iconify" data-icon="octicon:mark-github-16"></span>
-  <a href="https://www.linkedin.com/in/eric-tran-6aab70130/">
-    <span href="https://www.linkedin.com/in/eric-tran-6aab70130/" class="iconify"
-  data-icon="ri:linkedin-box-fill"></span>
-  <a href="https://angel.co/u/eric-tran-28">
-    <span class="iconify" data-icon="la:angellist"></span>
-  </a>
+  <form action=".">
+    <input type="number" class="timerInput" placeholder="Mins" id="focusTime" />
+    <input type="number" class="timerInput" placeholder="Secs" id="focusTime" />
+    <button type="submit">
+      <i class="fa fa-save"></i>
+    </button>
+  </form>
   <header>
     <h1>TEMPO</h1>
+    <a href="https://github.com/eric-tran2/Tempo">
+      <span class="iconify" data-icon="octicon:mark-github-16"></span>
+    <a href="https://www.linkedin.com/in/eric-tran-6aab70130/">
+      <span href="https://www.linkedin.com/in/eric-tran-6aab70130/" class="iconify"
+    data-icon="ri:linkedin-box-fill"></span>
+    <a href="https://angel.co/u/eric-tran-28">
+      <span class="iconify" data-icon="la:angellist"></span>
+    </a>
     <div class="watch">
       <div class="boxClock">
         <div class="clock">

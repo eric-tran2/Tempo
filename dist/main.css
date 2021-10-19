@@ -14,7 +14,7 @@ body {
   background: linear-gradient(to right, black, #00ffea);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   color: white;
   font-family: "Yaldevi", sans-serif;
   min-height: 100vh;
@@ -156,7 +156,11 @@ select {
 /*!********************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/watch.scss ***!
   \********************************************************************************************************************************************/
-.box {
+.watch {
+  position: relative;
+}
+
+.boxClock {
   position: relative;
   z-index: 1;
   width: 400px;
@@ -164,10 +168,6 @@ select {
   backdrop-filter: blur(35px);
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.watch {
-  position: relative;
 }
 
 .watch::before {
@@ -243,6 +243,10 @@ select {
   height: 35%;
   background-color: yellow;
 }
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/timer.scss ***!
+  \********************************************************************************************************************************************/
+
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

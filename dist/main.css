@@ -14,11 +14,10 @@ body {
   background: linear-gradient(to right, black, #00ffea);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   color: white;
   font-family: "Yaldevi", sans-serif;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 header {

@@ -20,10 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(setClock, 1000)
 
 
-  
-  
-  
-  
   // ERROR for if entry is empty
   
   
@@ -82,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     const trashButton = document.createElement('button');
-    // trashButton.innerHTML = '<i class="fa fa-trash"></i>';
     trashButton.innerHTML = '<i class="fa fa-times" ></i>';
     trashButton.classList.add("delete-btn");
     todoDiv.appendChild(trashButton);

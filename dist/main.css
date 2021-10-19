@@ -206,31 +206,18 @@ select {
   bottom: 50%;
   left: 50%;
   border: 1px solid white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
   transform-origin: bottom;
   z-index: 10;
   transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
   background: white;
 }
 
-.clock .hand {
-  --rotation: 0;
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  border: 1px solid white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transform-origin: bottom;
-  z-index: 10;
-  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
-}
-
 .clock::after {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: white;
   z-index: 11;
   width: 15px;
   height: 15px;
@@ -241,21 +228,21 @@ select {
 }
 
 .clock .hand.hh {
-  width: 10px;
-  height: 35%;
-  background-color: black;
+  width: 7px;
+  height: 25%;
+  background-color: white;
 }
 
 .clock .hand.mm {
-  width: 7px;
-  height: 40%;
-  background-color: black;
+  width: 3px;
+  height: 30%;
+  background-color: white;
 }
 
 .clock .hand.ss {
-  width: 3px;
-  height: 45%;
-  background-color: red;
+  width: 1px;
+  height: 35%;
+  background-color: yellow;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
   \********************************************************************************************************************************************/
 @charset "UTF-8";
-* {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,12 +11,14 @@
 body {
   background-image: linear-gradient(192deg, #65dfc9 52%, #9065df 48%);
   background-image: linear-gradient(196deg, #100644 52%, gold 48%, green 100%);
+  background: linear-gradient(to right, black, #00ffea);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-family: "Yaldevi", sans-serif;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 header {
@@ -198,70 +200,62 @@ select {
   box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.1), 0px 40px 50px rgba(0, 0, 0, 0.1);
 }
 
-.clock::before {
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  background: white;
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
   content: "";
   position: absolute;
+  background-color: black;
+  z-index: 11;
   width: 15px;
   height: 15px;
-  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 20;
 }
 
-.hours, .minutes, .seconds {
-  position: absolute;
+.clock .hand.hh {
+  width: 10px;
+  height: 35%;
+  background-color: black;
 }
 
-.hours, .hr {
-  width: 220px;
-  height: 220px;
+.clock .hand.mm {
+  width: 7px;
+  height: 40%;
+  background-color: black;
 }
 
-.minutes, .min {
-  width: 220px;
-  height: 220px;
-}
-
-.seconds, .sec {
-  width: 220px;
-  height: 220px;
-}
-
-.hr, .min, .sec {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  border-radius: 75%;
-}
-
-.hr::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 80px;
-  background: #5a0303;
-  z-index: 3;
-  border-radius: 6px;
-}
-
-.min::before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 90px;
-  background: white;
-  z-index: 4;
-  border-radius: 6px;
-}
-
-.sec::before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 150px;
-  background: white;
-  z-index: 5;
-  border-radius: 6px;
+.clock .hand.ss {
+  width: 3px;
+  height: 45%;
+  background-color: red;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

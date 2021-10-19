@@ -12,36 +12,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const todoButton = document.querySelector('.todo-button');
   const todoList = document.querySelector('.todo-list');
   const filterOption = document.querySelector('.filter-todo');
-  const hourHand = document.querySelector('#hr');
-  const minuteHand = document.querySelector('#min');
-  const secondHand = document.querySelector('#sec');
-  const degrees = 6;
+  const hourHand = document.querySelector('[hourHand]')
+  const minuteHand = document.querySelector('[minuteHand]')
+  const secondHand = document.querySelector('[secondHand]')
+
+
+  setInterval(setClock, 1000)
+
+
   
-  // console.log(hourHand);
-  // console.log(minuteHand);
-  // console.log(secondHand);
-
-  let day = new Date();
-  let hours = day.getHours() * 30;
-  let minutes = day.getMinutes() * degrees;
-  let seconds = day.getSeconds() * degrees;
-
-
-
-
+  
+  
+  
   // ERROR for if entry is empty
-
-
+  
+  
   // const todoInputError = document.getElementById('.todo-input');
   // todoInputError.addEventListener("submit", (e) => {
-  //   let messages = [];
-  //   if (todoInput.value === '') {
-  //     messages.push('Cannot be left blank');
-  //   }
-  // })
-
-
-  getTodos();
+    //   let messages = [];
+    //   if (todoInput.value === '') {
+      //     messages.push('Cannot be left blank');
+      //   }
+      // })
+      
+      
+      setClock();
+      getTodos();
   
   todoButton.addEventListener("click", addTodo);
   todoList.addEventListener("click", deleteCheck);
@@ -49,7 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// functions
 
+  function setClock() {
+    const currentDate = new Date()
+    const secondsRatio = currentDate.getSeconds() / 60
+    const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60
+    const hoursRatio = (minutesRatio + currentDate.getHours()) / 12
+    setRotation(secondHand, secondsRatio)
+    setRotation(minuteHand, minutesRatio)
+    setRotation(hourHand, hoursRatio)
+  }
+
+  function setRotation(element, rotationRatio) {
+    element.style.setProperty('--rotation', rotationRatio * 360)
+  }
 
   function addTodo(event){
     event.preventDefault();

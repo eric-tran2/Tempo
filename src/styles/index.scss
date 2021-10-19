@@ -1,4 +1,4 @@
-* {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,12 +7,14 @@
 body {
   background-image: linear-gradient(192deg, #65dfc9 52%, #9065df 48%);
   background-image: linear-gradient(196deg, #100644 52%, gold 48%, green 100%);
+  background: linear-gradient(to right, hsl(0, 0%, 0%), hsl(175, 100%, 50%));  
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-family: 'Yaldevi', sans-serif;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 // body::before {

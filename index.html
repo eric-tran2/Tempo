@@ -27,25 +27,35 @@
   <a href="https://angel.co/u/eric-tran-28">
     <span class="iconify" data-icon="la:angellist"></span>
   </a>
-  <header>
-    <h1>TEMPO</h1>
-    <div class="watch">
-      <div class="box">
-        <div class="clock">
-          <div class="hours">
-            <div class="hr" id="hr"></div>  
-          <div class="minutes">
-            <div class="min" id="min"></div>
-          <div class="seconds">
-            <div class="sec" id="sec"></div>
-          </div>
+  <!-- <div class="watch">
+    <div class="box">
+      <div class="clock">
+        <div class="hours">
+          <div class="hr" id="hr">
+        </div>  
+        <div class="minutes">
+          <div class="min" id="min">
+        </div>
+        <div class="seconds">
+          <div class="sec" id="sec">
         </div>
       </div>
     </div>
+  </div>
+</div> -->
+<div class="watch">
+  <div class="box">
+    <div class="clock">
+      <div class="hand hh" hourHand></div>
+      <div class="hand mm" minuteHand></div>
+      <div class="hand ss" secondHand></div>
+    </div>
+  </div>
+</div>
+  <header>
+    <h1>TEMPO</h1>
   </header>
   <form>
-    <!-- <h1>List of things to do</h1> -->
-    <br>
     <input type="text" class="todo-input">
     <button class="todo-button" type="submit">
       <i class="fa fa-plus-square"></i>

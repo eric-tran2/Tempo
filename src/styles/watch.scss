@@ -97,4 +97,10 @@
 
 .sec::before {
   content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: white;
+  z-index: 5;
+  border-radius: 6px;
 }

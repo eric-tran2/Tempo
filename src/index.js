@@ -12,6 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const todoButton = document.querySelector('.todo-button');
   const todoList = document.querySelector('.todo-list');
   const filterOption = document.querySelector('.filter-todo');
+  const hourHand = document.querySelector('#hr');
+  const minuteHand = document.querySelector('#min');
+  const secondHand = document.querySelector('#sec');
+  const degrees = 6;
+  
+  // console.log(hourHand);
+  // console.log(minuteHand);
+  // console.log(secondHand);
+
+  let day = new Date();
+  let hours = day.getHours() * 30;
+  let minutes = day.getMinutes() * degrees;
+  let seconds = day.getSeconds() * degrees;
+
+
 
 
   // ERROR for if entry is empty

@@ -19,15 +19,6 @@ body {
   min-height: 100vh;
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 header {
   font-size: 29px;
   font-family: "Cormorant Garamond", serif;
@@ -214,7 +205,7 @@ select {
   height: 15px;
   background-color: white;
   border-radius: 50%;
-  z-index: 30;
+  z-index: 20;
 }
 
 .hours, .minutes, .seconds {
@@ -241,7 +232,30 @@ select {
   justify-content: center;
   position: absolute;
   border-radius: 75%;
-  background-color: red;
+}
+
+.hr::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #5a0303;
+  z-index: 3;
+  border-radius: 6px;
+}
+
+.min::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: white;
+  z-index: 4;
+  border-radius: 6px;
+}
+
+.sec::before {
+  content: "";
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

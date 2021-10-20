@@ -105,6 +105,7 @@ form button:hover {
 
 .todo-item {
   padding: 0rem 1rem;
+  list-style-type: none;
 }
 
 .completed {
@@ -246,7 +247,33 @@ select {
 /*!********************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/timer.scss ***!
   \********************************************************************************************************************************************/
+.timer {
+  font-family: sans-serif;
+  font-family: "Yaldevi", sans-serif;
+}
 
+.timer__part {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.timer__btn {
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  border-radius: 50%;
+  border: none;
+  background: #8208e6;
+  cursor: pointer;
+}
+
+.timer__btn--start {
+  background: #00b84c;
+}
+
+.timer__btn--stop {
+  background: #ff0256;
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

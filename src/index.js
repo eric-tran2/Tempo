@@ -6,7 +6,6 @@ import "./styles/timer.scss";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-// selectors
 
 
   const todoInput = document.querySelector('.todo-input');
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// functions
 
   function setClock() {
     const currentDate = new Date()
@@ -230,11 +228,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateInterfaceControls() {
       if (this.interval === null) {
-        // this.el.control.innerHTML = `<span class="material-icons">play_arrow</span>`;
         this.el.control.classList.add("timer__btn--start");
         this.el.control.classList.remove("timer__btn--stop");
       } else {
-        // this.el.control.innerHTML = `<span class="material-icons">pause</span>`;
         this.el.control.classList.add("timer__btn--stop");
         this.el.control.classList.remove("timer__btn--start");
       }

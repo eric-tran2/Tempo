@@ -249,13 +249,16 @@ select {
   \********************************************************************************************************************************************/
 .timer {
   display: flex;
-  padding: 24px 32px;
+  padding: 7px 12px;
   border-radius: 35px;
   background: white;
+  align-items: center;
 }
 
 .timer__part {
-  font-size: 46px;
+  font-size: 45px;
+  padding: 0.6rem;
+  border: none;
   color: black;
   font-family: "Yaldevi", sans-serif;
 }
@@ -279,8 +282,16 @@ select {
   background: #186183;
 }
 
+.timer__btn--start:hover {
+  color: purple;
+}
+
 .timer__btn--stop {
   background: red;
+}
+
+.timer__btn--stop:hover {
+  color: purple;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

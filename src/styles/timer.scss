@@ -2,13 +2,17 @@
 
 .timer {
   display: flex;
-  padding: 24px 32px;
+  padding: 7px 12px;
   border-radius: 35px;
   background: white;
+  align-items: center;
+
 }
 
 .timer__part {
-  font-size: 46px;
+  font-size: 45px;
+  padding: .6rem;
+  border: none;
   color: black;
   font-family: 'Yaldevi', sans-serif;
 }
@@ -34,6 +38,14 @@
   background: #186183;
 }
 
+.timer__btn--start:hover {
+  color: purple;
+}
+
 .timer__btn--stop {
   background: red;
 }
+.timer__btn--stop:hover {
+  color: purple;
+}
+

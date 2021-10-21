@@ -248,10 +248,9 @@ select {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/timer.scss ***!
   \********************************************************************************************************************************************/
 .timer {
-  font-family: sans-serif;
-  display: inline-block;
+  display: flex;
   padding: 24px 32px;
-  border-radius: 30px;
+  border-radius: 35px;
   background: white;
 }
 
@@ -262,7 +261,13 @@ select {
 }
 
 .timer__btn {
-  background: purple;
+  background: red;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  background: red;
   color: white;
   border: none;
   padding: 1rem;
@@ -271,11 +276,11 @@ select {
 }
 
 .timer__btn--start {
-  background: #00b84c;
+  background: #186183;
 }
 
 .timer__btn--stop {
-  background: #ff0256;
+  background: red;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

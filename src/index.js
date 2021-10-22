@@ -188,18 +188,18 @@ document.addEventListener('DOMContentLoaded', () => {
   ////////////////////////
 
   class Timer {
-    constructor(root) {
-      this.el = {
-        minutes: root.querySelector(".timer__part--minutes"),
-        seconds: root.querySelector(".timer__part--seconds"),
-        control: root.querySelector(".timer__btn--control"),
-        reset: root.querySelector(".timer__btn--reset")
+    constructor(base) {
+      this.times = {
+        minutes: base.querySelector(".timer__part--minutes"),
+        seconds: base.querySelector(".timer__part--seconds"),
+        control: base.querySelector(".timer__btn--control"),
+        reset: base.querySelector(".timer__btn--reset")
       };
 
       this.interval = null;
       this.remainingSeconds = 0;
 
-      this.el.control.addEventListener("click", () => {
+      this.times.control.addEventListener("click", () => {
         if (this.interval === null) {
           this.start();
         } else {
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      this.el.reset.addEventListener("click", () => {
+      this.times.reset.addEventListener("click", () => {
         const inputMinutes = prompt("Enter number of minutes:");
 
         if (inputMinutes < 60) {
@@ -222,17 +222,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const minutes = Math.floor(this.remainingSeconds / 60);
       const seconds = this.remainingSeconds % 60;
 
-      this.el.minutes.textContent = minutes.toString().padStart(2, "0");
-      this.el.seconds.textContent = seconds.toString().padStart(2, "0");
+      this.times.minutes.textContent = minutes.toString().padStart(2, "0");
+      this.times.seconds.textContent = seconds.toString().padStart(2, "0");
     }
 
     updateInterfaceControls() {
       if (this.interval === null) {
-        this.el.control.classList.add("timer__btn--start");
-        this.el.control.classList.remove("timer__btn--stop");
+        this.times.control.classList.add("timer__btn--start");
+        this.times.control.classList.remove("timer__btn--stop");
       } else {
-        this.el.control.classList.add("timer__btn--stop");
-        this.el.control.classList.remove("timer__btn--start");
+        this.times.control.classList.add("timer__btn--stop");
+        this.times.control.classList.remove("timer__btn--start");
       }
     }
 

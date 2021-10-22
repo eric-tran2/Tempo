@@ -3,10 +3,10 @@
 .timer {
   display: flex;
   padding: 7px 12px;
-  border-radius: 35px;
+  border-radius: 15%;
   background: white;
   align-items: center;
-
+  border: groove;
 }
 
 .timer__part {
@@ -20,14 +20,7 @@
 .timer__btn {
   background: red;
   color: white;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-  
-  background: red;
-  color: white;
-  border: none;
+  border: groove;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;

@@ -199,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.interval = null;
       this.remainingSeconds = 0;
 
+      
       this.times.control.addEventListener("click", () => {
         if (this.interval === null) {
           this.start();
@@ -206,16 +207,21 @@ document.addEventListener('DOMContentLoaded', () => {
           this.stop();
         }
       });
-
+      
       this.times.reset.addEventListener("click", () => {
         const inputMinutes = prompt("Enter number of minutes:");
-
+        
         if (inputMinutes < 60) {
           this.stop();
           this.remainingSeconds = inputMinutes * 60;
           this.updateInterfaceTime();
         }
       });
+    }
+    
+    ding() {
+      const bell = document.querySelector("audio");
+      bell.play();
     }
 
     updateInterfaceTime() {
@@ -238,16 +244,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     start() {
       if (this.remainingSeconds === 0) return;
-
+      
       this.interval = setInterval(() => {
         this.remainingSeconds--;
         this.updateInterfaceTime();
-
+        
         if (this.remainingSeconds === 0) {
           this.stop();
         }
       }, 1000);
-
+      
+      this.ding();
       this.updateInterfaceControls();
     }
 

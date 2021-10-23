@@ -251,10 +251,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (this.remainingSeconds === 0) {
           this.stop();
+          this.ding();
         }
       }, 1000);
       
-      this.ding();
       this.updateInterfaceControls();
     }
 

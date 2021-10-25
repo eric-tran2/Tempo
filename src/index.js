@@ -288,7 +288,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <form>
         <div id="instructions">
         <ul>
-        <h2>On the left side of the screen there is a countdown timer.<h2>
+        <h1>Timer<h1>
+        <h3>To help space out work sessions, there is a countdown timer on the left side of the screen.<h3>
+        <h3>You can enter the number of minutes for studying or taking a break using the power button.<h3>
+        <h4>Tip: A popular time management technique called Pomodoro is to work for 25 minutes and take 5 minute breaks.<h4>
+        <h1>Daily Tasks<h1>
+        <h3>Enter the tasks to be completed.<h3>
+        <h3>The arrow button submits the task, garbage button clears all tasks, check mark completes the task, and cross deletes a singular task.<h3>
         </ul>
         </div>
         <button id="submit">Close</button>

@@ -2,12 +2,13 @@
 import "./styles/index.scss";
 import "./styles/watch.scss";
 import "./styles/timer.scss";
+import "./styles/modal.scss";
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
 
-
+  const deleteAll = document.querySelector('.delete-all')
   const todoInput = document.querySelector('.todo-input');
   const todoButton = document.querySelector('.todo-button');
   const todoList = document.querySelector('.todo-list');
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hourHand = document.querySelector('[hourHand]')
   const minuteHand = document.querySelector('[minuteHand]')
   const secondHand = document.querySelector('[secondHand]')
+  const instructions = document.querySelector('.instructions_button');
 
 
   setInterval(setClock, 1000)
@@ -34,10 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
       
       setClock();
       getTodos();
+
   
   todoButton.addEventListener("click", addTodo);
   todoList.addEventListener("click", deleteCheck);
   filterOption.addEventListener("click", filterTodo);
+  instructions.addEventListener("click", instructionsModal)
+  deleteAll.addEventListener("click", () => {
+    localStorage.clear();
+  })
 
 
 
@@ -214,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (inputMinutes < 60) {
           this.stop();
           this.remainingSeconds = inputMinutes * 60;
-          this.updateInterfaceTime();
+          this.updateTime();
         }
       });
     }
@@ -224,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bell.play();
     }
 
-    updateInterfaceTime() {
+    updateTime() {
       const minutes = Math.floor(this.remainingSeconds / 60);
       const seconds = this.remainingSeconds % 60;
 
@@ -232,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.times.seconds.textContent = seconds.toString().padStart(2, "0");
     }
 
-    updateInterfaceControls() {
+    updateControls() {
       if (this.interval === null) {
         this.times.control.classList.add("timer__btn--start");
         this.times.control.classList.remove("timer__btn--stop");
@@ -247,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       this.interval = setInterval(() => {
         this.remainingSeconds--;
-        this.updateInterfaceTime();
+        this.updateTime();
         
         if (this.remainingSeconds === 0) {
           this.stop();
@@ -255,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, 1000);
       
-      this.updateInterfaceControls();
+      this.updateControls();
     }
 
     stop() {
@@ -263,13 +270,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
       this.interval = null;
 
-      this.updateInterfaceControls();
+      this.updateControls();
     }
   }
 
   new Timer(
     document.querySelector(".timer")
   );
+
+  function instructionsModal() {
+    const instructionBtn = document.createElement('div');
+    instructionBtn.className = "modal";
+    instructionBtn.innerHTML = `
+        <div class="modal-screen">
+        </div>
+        <div class="modal-form">
+        <form>
+        <div id="instructions">
+        <ul>
+        <h2>On the left side of the screen there is a countdown timer.<h2>
+        </ul>
+        </div>
+        <button id="submit">Close</button>
+    
+
+            </form>
+        </div>
+    `
+    document.body.appendChild(instructionBtn)
+  }
 
 })
 

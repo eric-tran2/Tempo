@@ -17,63 +17,79 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>Tempo</title>
+    <button class="instructions_button">Instructions</button>
   </head>
   <body>
-  <header>
+    <div class="divInBody">
+      <header>
+        <div class="timer">
+          <div>
+            <span class="timer__part timer__part--minutes">00</span>
+            <span class="timer__part">:</span>
+            <span class="timer__part timer__part--seconds">00</span>
+          </div>
+          <audio
+          src='https://soundbible.com/mp3/service-bell_daniel_simion.mp3'
+          ></audio>
+          <button type="button" class="timer__btn timer__btn--control timer__btn--start">
+            <i class="fa fa-play"></i>
+          </button>
+          <button type="button" class="timer__btn timer__btn--reset">
+            <i class="fa fa-power-off"></i>
 
-    <div class="timer">
-      <div>
-        <span class="timer__part timer__part--minutes">00</span>
-        <span class="timer__part">:</span>
-        <span class="timer__part timer__part--seconds">00</span>
-      </div>
-      <audio
-        src='https://soundbible.com/mp3/service-bell_daniel_simion.mp3'
-      ></audio>
-      <button type="button" class="timer__btn timer__btn--control timer__btn--start">
-        <i class="fa fa-play"></i>
-      </button>
-      <button type="button" class="timer__btn timer__btn--reset">
-        <i class="fa fa-power-off"></i>
-      </button>
-    </div>
-      
-    <h1>TEMPO</h1>
-    <a href="https://github.com/eric-tran2/Tempo">
-      <span class="iconify" data-icon="octicon:mark-github-16"></span>
-    <a href="https://www.linkedin.com/in/eric-tran-6aab70130/">
-      <span href="https://www.linkedin.com/in/eric-tran-6aab70130/" class="iconify"
-    data-icon="ri:linkedin-box-fill"></span>
-    <a href="https://angel.co/u/eric-tran-28">
-      <span class="iconify" data-icon="la:angellist"></span>
-    </a>
-    <div class="watch">
-      <div class="boxClock">
-        <div class="clock">
-          <div class="hand hh" hourHand></div>
-          <div class="hand mm" minuteHand></div>
-          <div class="hand ss" secondHand></div>
+          </button>
         </div>
-      </div>
-    </div>
-  </header>
-  <form>
-    <input type="text" class="todo-input" placeholder="Tasks for the day">
-    <button class="todo-button" type="submit">
-      <i class="fa fa-location-arrow"></i>
-    </button>
-    <div class="select">
-      <select name="todos" class="filter-todo">
-        <option value="all">All</option>
-        <option value="finished">Finished</option>
-        <option value="unfinished">Unfinished</option>
-      </select>
-    </div>
-  </form>
-  <div class="todo-container">
-    <ul class="todo-list"></ul>
-  </div>
-</body>
+        
+        <h1>TEMPO</h1>
+        <a href="https://github.com/eric-tran2/Tempo">
+          <span class="iconify" data-icon="octicon:mark-github-16"></span>
+          <a href="https://www.linkedin.com/in/eric-tran-6aab70130/">
+            <span href="https://www.linkedin.com/in/eric-tran-6aab70130/" class="iconify"
+            data-icon="ri:linkedin-box-fill"></span>
+            <a href="https://angel.co/u/eric-tran-28">
+              <span class="iconify" data-icon="la:angellist"></span>
+            </a>
+            <div class="watch">
+              <div class="boxClock">
+                <div class="clock">
+                  <a class="centerNaming">TEMPO</a>
+                  <div class="hand hh" hourHand></div>
+                  <div class="hand mm" minuteHand></div>
+                  <div class="hand ss" secondHand></div>
+                </div>
+              </div>
+              <!-- <div class="todo-container">
+                <ul class="todo-list"></ul>
+              </div> -->
+            </div>
+            
+          </header>
+
+          <form>
+            <input type="text" class="todo-input" placeholder="Tasks for the day">
+            <button class="todo-button" type="submit">
+              <i class="fa fa-location-arrow"></i>
+            </button>
+            <button class="delete-all" type="submit">
+              <i class="fa fa-trash"></i>
+            </button>
+            <div class="select">
+              <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="finished">Finished</option>
+                <option value="unfinished">Unfinished</option>
+              </select>
+            </div>
+          </form> 
+
+        </div>
+
+          <div class="todo-container">
+            <ul class="todo-list"></ul>
+          </div>
+
+          
+      </body>
 
 </html>
 

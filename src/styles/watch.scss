@@ -13,15 +13,15 @@
 }
 
 
-.watch::before {
-  content: "";
-  position: absolute;
-  bottom: -150px;
-  width: 100%;
-  height: 60px;
-  background: radial-gradient(rgba(0,0,0,0.2), transparent, transparent);
-  border-radius: 50%;
-}
+// .watch::before {
+//   content: "";
+//   position: absolute;
+//   bottom: -150px;
+//   width: 100%;
+//   height: 60px;
+//   // background: radial-gradient(rgba(0,0,0,0.2), transparent, transparent);
+//   border-radius: 50%;
+// }
 
 .clock {
   position: absolute;
@@ -81,5 +81,11 @@
   width: 1px;
   height: 35%;
   background-color: yellow;
+}
+
+.centerNaming {
+  z-index: 21;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
 }
 

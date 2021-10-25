@@ -9,15 +9,16 @@
 }
 
 body {
-  background: linear-gradient(to right, black, #00ffea);
+  background: url(cubes.png);
+}
+
+.divInBody {
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-family: "Yaldevi", sans-serif;
-  min-height: 100vh;
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-size: 200%;
 }
 
 header {
@@ -106,6 +107,7 @@ form button:hover {
 .todo-item {
   padding: 0rem 1rem;
   list-style-type: none;
+  font-family: "Yaldevi", sans-serif;
 }
 
 .completed {
@@ -171,16 +173,6 @@ select {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.watch::before {
-  content: "";
-  position: absolute;
-  bottom: -150px;
-  width: 100%;
-  height: 60px;
-  background: radial-gradient(rgba(0, 0, 0, 0.2), transparent, transparent);
-  border-radius: 50%;
-}
-
 .clock {
   position: absolute;
   top: 10px;
@@ -244,6 +236,12 @@ select {
   height: 35%;
   background-color: yellow;
 }
+
+.centerNaming {
+  z-index: 21;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+}
 /*!********************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/timer.scss ***!
   \********************************************************************************************************************************************/
@@ -253,7 +251,6 @@ select {
   border-radius: 15%;
   background: white;
   align-items: center;
-  border: groove;
 }
 
 .timer__part {
@@ -273,6 +270,10 @@ select {
   font-size: 1rem;
 }
 
+.timer__btn:hover {
+  color: navy;
+}
+
 .timer__btn--start {
   background: #186183;
 }
@@ -287,6 +288,49 @@ select {
 
 .timer__btn--stop:hover {
   color: purple;
+}
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/modal.scss ***!
+  \********************************************************************************************************************************************/
+.instructions_button {
+  font-family: "Yaldevi", sans-serif;
+  display: flex;
+  border: groove;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.instructions_button:hover {
+  background-color: #186a83;
+}
+
+.modal-screen {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -192px;
+  margin-left: -262px;
+  width: 524px;
+  height: 384px;
+  padding: 8px 24px;
+  background: #fff;
+  color: #fff;
+  background-color: #282828;
+  z-index: 3;
+  border-radius: 10px;
+  border: 1px solid #000;
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

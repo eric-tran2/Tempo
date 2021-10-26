@@ -20,19 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   setInterval(setClock, 1000)
-
-
-  // ERROR for if entry is empty
-  
-  
-  // const todoInputError = document.getElementById('.todo-input');
-  // todoInputError.addEventListener("submit", (e) => {
-    //   let messages = [];
-    //   if (todoInput.value === '') {
-      //     messages.push('Cannot be left blank');
-      //   }
-      // })
-      
       
       setClock();
       getTodos();

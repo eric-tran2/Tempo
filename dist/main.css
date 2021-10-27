@@ -1,7 +1,338 @@
-*,*::after,*::before{margin:0;padding:0;box-sizing:border-box}body{background:url(cubes.png)}.divInBody{display:flex;align-items:center;justify-content:center;color:#fff;font-family:"Yaldevi",sans-serif;background-size:200%}header{font-size:29px;font-family:"Cormorant Garamond",serif}header,form{min-height:20vh;display:flex;justify-content:center;align-items:center}form input,form button{padding:.6rem;font-size:1.5rem;border:none;background:#fff;font-family:"Yaldevi",sans-serif}form button{color:#186183;color:#2c0dc5;background:#fff;cursor:pointer;transition:all .5s ease}form button:hover{background:#186183;background:#2c0dc5;color:#fff}.todo-container{display:flex;justify-content:center;align-items:center}.todolist{min-width:30%;list-style:none}.todo{margin:.5rem;background:#fff;color:#000;font-size:1.5rem;display:flex;justify-content:space-between;align-items:center;transition:all .5s ease-in-out}.todo li{flex:1}.delete-btn,.complete-btn{background:red;color:#fff;border:none;padding:1rem;cursor:pointer;font-size:1rem}.complete-btn{background:#186a83}.complete-btn:hover{color:navy}.delete-btn:hover{color:navy}.todo-item{padding:0rem 1rem;list-style-type:none;font-family:"Yaldevi",sans-serif}.completed{text-decoration:line-through;opacity:.45}.drop{transform:translateY(8rem) rotateZ(20deg);opacity:0}select{-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none;border:none}.select{margin:1rem;position:relative;overflow:hidden}select{color:#186183;font-family:"Yaldevi",sans-serif;width:9rem;cursor:pointer;padding:1rem}.select::after{content:"▼";position:absolute;background:#186183;top:0;right:0;padding:1rem;pointer-events:none;transition:all .3s ease}.select:hover::after{color:#186183}
-.watch{position:relative}.boxClock{position:relative;z-index:1;width:400px;height:400px;backdrop-filter:blur(35px);border-radius:50%;border:1px solid rgba(255,255,255,.25)}.clock{position:absolute;top:10px;left:10px;right:10px;bottom:10px;display:flex;justify-content:center;align-items:center;background:radial-gradient(transparent, rgba(255, 255, 255, 0.2)),url(roman_clock1.png);background-size:cover;border-radius:50%;backdrop-filter:blur(35px);border:1px solid rgba(255,255,255,.25);border-right:none;border-bottom:none;box-shadow:-10px -10px 20px rgba(255,255,255,.1),10px 10px 20px rgba(0,0,0,.1),0px 40px 50px rgba(0,0,0,.1)}.clock .hand{--rotation: 0;position:absolute;bottom:50%;left:50%;border:1px solid #000;border-top-left-radius:100px;border-top-right-radius:100px;transform-origin:bottom;z-index:10;transform:translateX(-50%) rotate(calc(var(--rotation) * 1deg));background:#000}.clock::after{content:"";position:absolute;background-color:#000;z-index:11;width:15px;height:15px;top:50%;left:50%;transform:translate(-50%, -50%);border-radius:50%}.clock .hand.hh{width:7px;height:25%;background-color:#000}.clock .hand.mm{width:3px;height:30%;background-color:#000}.clock .hand.ss{width:1px;height:35%;background-color:#ff0}.centerNaming{z-index:21;font-family:"Cormorant Garamond",serif;font-size:30px}
-.timer{display:flex;padding:7px 12px;border-radius:15%;background:#fff;align-items:center}.timer__part{font-size:45px;padding:.6rem;border:none;color:#000;font-family:"Yaldevi",sans-serif}.timer__btn{background:red;color:#fff;border:groove;padding:1rem;cursor:pointer;font-size:1rem}.timer__btn:hover{color:navy}.timer__btn--start{background:#186183}.timer__btn--start:hover{color:purple}.timer__btn--stop{background:red}.timer__btn--stop:hover{color:purple}
-.instructions_button{font-family:"Yaldevi",sans-serif;display:flex;border:groove;padding:1rem;cursor:pointer;font-size:1rem}.instructions_button:hover{background-color:#186a83}.modal-screen{position:absolute;height:100%;top:0;bottom:0;left:0;right:0;z-index:2;background:rgba(0,0,0,.5)}.modal-form{position:absolute;top:50%;left:50%;margin-top:-192px;margin-left:-262px;width:524px;height:384px;padding:8px 24px;background:#fff;color:#fff;background-color:#282828;z-index:3;border-radius:10px;border:1px solid #000}
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
+  \********************************************************************************************************************************************/
+@charset "UTF-8";
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background: url(cubes.png);
+}
 
-/*# sourceMappingURL=main.css.map*/
+.divInBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Yaldevi", sans-serif;
+  background-size: 200%;
+}
+
+header {
+  font-size: 29px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input, form button {
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  border: none;
+  background: white;
+  font-family: "Yaldevi", sans-serif;
+}
+
+form button {
+  color: #186183;
+  color: #2c0dc5;
+  background: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+form button:hover {
+  background: #186183;
+  background: #2c0dc5;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.delete-btn,
+.complete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: #186a83;
+}
+
+.complete-btn:hover {
+  color: navy;
+}
+
+.delete-btn:hover {
+  color: navy;
+}
+
+.todo-item {
+  padding: 0rem 1rem;
+  list-style-type: none;
+  font-family: "Yaldevi", sans-serif;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.45;
+}
+
+.drop {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #186183;
+  font-family: "Yaldevi", sans-serif;
+  width: 9rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  background: #186183;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  color: #186183;
+}
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/watch.scss ***!
+  \********************************************************************************************************************************************/
+.watch {
+  position: relative;
+}
+
+.boxClock {
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  backdrop-filter: blur(35px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.clock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(transparent, rgba(255, 255, 255, 0.2)), url(roman_clock1.png);
+  background-size: cover;
+  border-radius: 50%;
+  backdrop-filter: blur(35px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: none;
+  border-bottom: none;
+  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.1), 0px 40px 50px rgba(0, 0, 0, 0.1);
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid black;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  background: black;
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.clock .hand.hh {
+  width: 7px;
+  height: 25%;
+  background-color: black;
+}
+
+.clock .hand.mm {
+  width: 3px;
+  height: 30%;
+  background-color: black;
+}
+
+.clock .hand.ss {
+  width: 1px;
+  height: 35%;
+  background-color: yellow;
+}
+
+.centerNaming {
+  z-index: 21;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+}
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/timer.scss ***!
+  \********************************************************************************************************************************************/
+.timer {
+  display: flex;
+  padding: 7px 12px;
+  border-radius: 15%;
+  background: white;
+  align-items: center;
+}
+
+.timer__part {
+  font-size: 45px;
+  padding: 0.6rem;
+  border: none;
+  color: black;
+  font-family: "Yaldevi", sans-serif;
+}
+
+.timer__btn {
+  background: red;
+  color: white;
+  border: groove;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.timer__btn:hover {
+  color: navy;
+}
+
+.timer__btn--start {
+  background: #186183;
+}
+
+.timer__btn--start:hover {
+  color: purple;
+}
+
+.timer__btn--stop {
+  background: red;
+}
+
+.timer__btn--stop:hover {
+  color: purple;
+}
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/modal.scss ***!
+  \********************************************************************************************************************************************/
+.instructions_button {
+  font-family: "Yaldevi", sans-serif;
+  display: flex;
+  border: groove;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.instructions_button:hover {
+  background-color: #186a83;
+}
+
+.modal-screen {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -192px;
+  margin-left: -262px;
+  width: 524px;
+  height: 384px;
+  padding: 8px 24px;
+  background: #fff;
+  color: #fff;
+  background-color: #282828;
+  z-index: 3;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+

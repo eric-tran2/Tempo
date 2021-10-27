@@ -276,7 +276,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <div id="instructions">
         <ul>
         <h1>Timer<h1>
-        <h3>To help space out work sessions, there is a countdown timer on the left side of the screen. You can enter the number of minutes for studying or taking a break using the power button.
+        <h3>To help space out work sessions, there is a countdown timer on the left side of the screen. 
+        You can enter the number of minutes for studying or taking a break using the power button.
         Tip: A popular time management technique called Pomodoro is to work for 25 minutes and take 5 minute breaks.
         <h3>
         <h1>Daily Tasks<h1>

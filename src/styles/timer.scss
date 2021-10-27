@@ -1,28 +1,85 @@
 
 
+// .timer {
+//   display: flex;
+//   padding: 7px 12px;
+//   border-radius: 15%;
+//   background: white;
+//   align-items: center;
+// }
+
+// .timer__part {
+//   font-size: 45px;
+//   padding: .6rem;
+//   border: none;
+//   color: black;
+//   font-family: 'Yaldevi', sans-serif;
+// }
+
+// .timer__btn {
+//   background: red;
+//   color: white;
+//   border: groove;
+//   padding: 1rem;
+//   cursor: pointer;
+//   font-size: 1rem;
+// }
+
+// .timer__btn:hover {
+//   color: navy;
+// }
+
+
+// .timer__btn--start {
+//   background: #186183;
+// }
+
+// .timer__btn--start:hover {
+//   color: purple;
+// }
+
+// .timer__btn--stop {
+//   background: red;
+// }
+// .timer__btn--stop:hover {
+//   color: purple;
+// }
+
+
+
 .timer {
-  display: flex;
-  padding: 7px 12px;
-  border-radius: 15%;
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 24px 32px;
+  border-radius: 30px;
   background: white;
-  align-items: center;
+  color: black;
 }
 
 .timer__part {
-  font-size: 45px;
-  padding: .6rem;
-  border: none;
-  color: black;
+  font-size: 36px;
+  font-weight: bold;
   font-family: 'Yaldevi', sans-serif;
+
 }
 
 .timer__btn {
-  background: red;
+  width: 40px;
+  height: 40px;
+  margin-left: 6.5px;
+  border-radius: 50%;
+  border: none;
   color: white;
-  border: groove;
-  padding: 1rem;
+  background: #8208e6;
   cursor: pointer;
-  font-size: 1rem;
+}
+
+.timer__btn--start {
+  background: #00b84c;
+}
+
+.timer__btn--stop {
+  background: #ff0256;
 }
 
 .timer__btn:hover {
@@ -44,4 +101,6 @@
 .timer__btn--stop:hover {
   color: purple;
 }
+
+
 

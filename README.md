@@ -1,5 +1,5 @@
 # Tempo
-[Tempo](https://eric-tran2.github.io/Tempo) is a project based on the Pomodoro Technique to improve productivity and workflow. The Pomodoro Technique is a time management method that encourages people to maximize their time rather than waste it. This method involves breaking your workday up into 25-minute chunks followed by five-minute breaks.  Approximately four pomodoros are followed by a longer break of between 15 and 20 minutes. Tempo is also designed to look like a watch and helps you keep track of time and helps become more productive.
+[Tempo](https://eric-tran2.github.io/Tempo){:target="_blank"} is a project based on the Pomodoro Technique to improve productivity and workflow. The Pomodoro Technique is a time management method that encourages people to maximize their time rather than waste it. This method involves breaking your workday up into 25-minute chunks followed by five-minute breaks.  Approximately four pomodoros are followed by a longer break of between 15 and 20 minutes. Tempo is also designed to look like a watch and helps you keep track of time and helps become more productive.
 
 Here's the [live site](https://eric-tran2.github.io/Tempo)
 

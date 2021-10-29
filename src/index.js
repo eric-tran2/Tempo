@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function deleteAllTasks(event) {
     event.preventDefault();
-    const areYouSure = confirm("Are you sure you want to delete everything?");
+    const areYouSure = confirm("Are you sure you want to delete all tasks?");
     areYouSure;
     if (areYouSure) {
       localStorage.removeItem("todos")

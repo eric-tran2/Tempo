@@ -72,13 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
     saveToLocalStorage(todoInput.value);
 
     const completedButton = document.createElement('button');
-    completedButton.innerHTML = '<i class="fa fa-check"></i>';
+    completedButton.innerHTML = '<i class="completemark fa fa-check"></i>';
+
+
     completedButton.classList.add("complete-btn");
     todoDiv.appendChild(completedButton);
 
     
     const trashButton = document.createElement('button');
-    trashButton.innerHTML = '<i class="fa fa-times" ></i>';
+    trashButton.innerHTML = '<i class="deletemark fa fa-times" ></i>';
     trashButton.classList.add("delete-btn");
     todoDiv.appendChild(trashButton);
 
@@ -99,6 +101,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (task.classList[0] === "complete-btn"){
       const todo = task.parentElement;
+      todo.classList.toggle("completed");
+    }
+    if (task.classList[0] === "deletemark") {
+      const todo = task.parentElement.parentElement;
+      todo.classList.add("drop");
+      removeFromLocalStorage(todo);
+      todo.addEventListener("transitionend", function () {
+        todo.remove();
+      })
+    }
+    if (task.classList[0] === "completemark") {
+      const todo = task.parentElement.parentElement;
       todo.classList.toggle("completed");
     }
   }

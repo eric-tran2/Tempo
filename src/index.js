@@ -29,9 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
   todoList.addEventListener("click", deleteCheck);
   filterOption.addEventListener("click", filterTodo);
   instructions.addEventListener("click", instructionsModal)
-  deleteAll.addEventListener("click", () => {
-    localStorage.clear();
-  })
+  deleteAll.addEventListener("click", deleteAllTasks) 
+
+
+
+  function deleteAllTasks(event) {
+    event.preventDefault();
+    localStorage.removeItem("todos")
+    if (todoList.hasChildNodes()) todoList.innerHTML = '';
+    
+  }
 
 
 

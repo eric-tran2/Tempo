@@ -71,13 +71,17 @@
             <button class="delete-all" type="submit">
               <i class="fa fa-trash"></i>
             </button>
-            <div class="select">
-              <select name="todos" class="filter-todo">
-                <option value="all">All</option>
-                <option value="finished">Finished</option>
-                <option value="unfinished">Unfinished</option>
-              </select>
-            </div>
+            
+              <div class="dropdown">
+                <a class="dropbtn">Filter</a>
+                <div class="dropdown-content">
+                  <div name="todos" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="finished">Finished</option>
+                    <option value="unfinished">Unfinished</option>
+                  </div>
+                </div>
+              </div>
           </form> 
 
         </div>

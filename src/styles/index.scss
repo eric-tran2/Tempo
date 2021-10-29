@@ -60,7 +60,7 @@ form button:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 200px;
+  margin-right: 100px;
 }
 
 .todolist {
@@ -156,7 +156,6 @@ select {
   color: #186183;
 }
 
- /* Dropdown Button */
 .dropbtn {
   background-color: #04AA6D;
   color: white;
@@ -164,6 +163,8 @@ select {
   font-size: 16px;
   border: none;
 }
+
+.dropbtn {cursor: progress}
 
 .dropdown {
   position: relative;
@@ -178,6 +179,8 @@ select {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+
+option { cursor: pointer;}
 
 .dropdown-content option {
   color: black;

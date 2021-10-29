@@ -35,8 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function deleteAllTasks(event) {
     event.preventDefault();
-    localStorage.removeItem("todos")
-    if (todoList.hasChildNodes()) todoList.innerHTML = '';
+    const areYouSure = confirm("Are you sure you want to delete everything?");
+    areYouSure;
+    if (areYouSure) {
+      localStorage.removeItem("todos")
+      if (todoList.hasChildNodes()) todoList.innerHTML = '';
+    }
     
   }
 
